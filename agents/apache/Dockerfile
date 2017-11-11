@@ -1,4 +1,4 @@
-FROM webdevops/apache-dev:ubuntu-16.04
+FROM webdevops/apache:ubuntu-16.04
 
 
 COPY startup-scripts/* /opt/docker/bin/service.d/httpd.d
