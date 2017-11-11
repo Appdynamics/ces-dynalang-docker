@@ -17,7 +17,7 @@ tar xvf ${APACHE_DIST} -C /opt
 
 pushd /opt/appdynamics-sdk-native
 ./install.sh
-
+mkdir /opt/appdynamics-sdk-native/appd-sdk
 
 if [ "$APPD_CONTROLLER_HOST" = "" ]; then
     echo "Please set APPD_CONTROLLER_HOST"
@@ -69,5 +69,7 @@ sed -e "s/APPD_CONTROLLER_HOST/${APPD_CONTROLLER_HOST}/" /opt/docker/etc/httpd/c
     sed -e "s/APPD_APPLICATION/${APPD_APPLICATION}/" | \
     sed -e "s/APPD_TIER/${APPD_TIER}/" | \
     sed -e "s/APPD_NODE/${APPD_NODE}/" > /opt/docker/etc/httpd/conf.d/99-appdynamics_agent.conf
+
+cp /opt/docker/etc/httpd/conf.d/99-appdynamics_agent.conf /opt/appdynamics-sdk-native/logs
 
 

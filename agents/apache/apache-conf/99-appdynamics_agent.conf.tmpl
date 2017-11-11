@@ -3,6 +3,8 @@ LoadFile /opt/appdynamics-sdk-native/sdk_lib/lib/libappdynamics_native_sdk.so
 LoadModule appdynamics_module /opt/appdynamics-sdk-native/WebServerAgent/Apache/libmod_appdynamics.so
 
 AppDynamicsEnabled ON
+AppDynamicsLaunchProxy ON
+AppDynamicsProxyCommDir /opt/appdynamics-sdk-native/appd-sdk
 
 AppDynamicsControllerHost APPD_CONTROLLER_HOST
 AppDynamicsControllerPort APPD_CONTROLLER_PORT
@@ -21,4 +23,3 @@ AppDynamicsResolveBackends ON
 AppDynamicsTraceAsError ON
 AppDynamicsReportAllInstrumentedModules OFF
 
-AppDynamicsLaunchProxy ON
