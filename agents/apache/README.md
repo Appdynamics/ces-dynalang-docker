@@ -2,17 +2,17 @@
 
 This container allows for dropping in an apache agent tarball and specifying the various parameters using environment variables. On run it will install and configure the agent with the parameters supplied and then start apache.
 
-Mounts (dst):
+### Mounts (dst):
 
 * /dists - The directory containing the agent tarball.
 * /opt/appdynamics-sdk-native/logs - Expose the agent logs directory.
 * /app - The apache document root.
 
-Ports:
+### Ports:
 
 * 80, 443 - Apache ports.
 
-Env Vars:
+### Env Vars:
 
 * APPD_CONTROLLER_HOST
 * APPD_CONTROLLER_PORT
@@ -23,7 +23,7 @@ Env Vars:
 * APPD_TIER
 * APPD_NODE
 
-Example run script:
+### Example run script:
 
 run.sh
 
@@ -46,5 +46,15 @@ docker run --name apache-agent \
     -e APPD_NODE="node1" \
     --rm brennanmhappd/apache-agent:latest
 ```
-    
-    
+
+### To Use:
+
+1. clone this repo.
+2. cd ces-dynalang-docker/agents/apache.
+3. edit run.sh with your controller/node params
+4. run run.sh
+
+### TODO
+
+1. Add http proxy settings.
+2. Modify run.sh to use variable for settings and host mount paths.
