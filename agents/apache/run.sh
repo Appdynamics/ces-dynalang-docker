@@ -14,4 +14,4 @@ docker run --name apache-agent \
     -e APPD_APPLICATION="MyApp" \
     -e APPD_TIER="Tier1" \
     -e APPD_NODE="node1" \
-    --rm brennanmh/apache-agent:latest
+    --rm brennanmhappd/apache-agent:latest
