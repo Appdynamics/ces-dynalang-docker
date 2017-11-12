@@ -16,7 +16,7 @@ This container allows for dropping in an apache agent tarball and specifying the
 
 * APPD_CONTROLLER_HOST
 * APPD_CONTROLLER_PORT
-* APPD_USE_SLL
+* APPD_USE_SSL
 * APPD_ACCOUNT_NAME
 * APPD_ACCESS_KEY
 * APPD_APPLICATION
