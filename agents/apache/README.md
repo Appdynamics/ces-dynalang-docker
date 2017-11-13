@@ -50,11 +50,14 @@ docker run --name apache-agent \
 ### To Use:
 
 1. clone this repo.
-2. cd ces-dynalang-docker/agents/apache.
-3. edit run.sh with your controller/node params
-4. run run.sh
+1. cd ces-dynalang-docker/agents/apache.
+1. cp run.sh to my-run.sh (make sure it's executable)
+1. edit my-run.sh with your controller/node params
+1. run my-run.sh
 
 ### TODO
 
 1. Add http proxy settings.
-2. Modify run.sh to use variable for settings and host mount paths.
+1. Modify run.sh to use variable for settings and host mount paths.
+1. Add docker-compose.yml
+
