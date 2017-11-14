@@ -1,0 +1,25 @@
+
+LoadFile /opt/appdynamics-sdk-native/sdk_lib/lib/libappdynamics_native_sdk.so
+LoadModule appdynamics_module /opt/appdynamics-sdk-native/WebServerAgent/Apache/libmod_appdynamics.so
+
+AppDynamicsEnabled ON
+AppDynamicsLaunchProxy ON
+AppDynamicsProxyCommDir /opt/appdynamics-sdk-native/appd-sdk
+
+AppDynamicsControllerHost APPD_CONTROLLER_HOST
+AppDynamicsControllerPort APPD_CONTROLLER_PORT
+AppDynamicsControllerSSL APPD_USE_SSL
+AppDynamicsAccountName APPD_ACCOUNT_NAME
+AppDynamicsAccessKey APPD_ACCESS_KEY
+
+#AppDynamicsProxyHost proxy.example.com
+#AppDynamicsProxyport 3128
+
+AppDynamicsApplication APPD_APPLICATION
+AppDynamicsTier APPD_TIER
+AppDynamicsNode APPD_NODE
+
+AppDynamicsResolveBackends ON
+AppDynamicsTraceAsError ON
+AppDynamicsReportAllInstrumentedModules OFF
+
